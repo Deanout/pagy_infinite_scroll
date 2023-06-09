@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     # @pagy, @posts = pagy(Post.all, items: 10)
     @pagy, @posts = pagy_countless(Post.all, items: 10)
-    sleep(1)
+    # sleep(1)
     respond_to do |format|
       format.html
       format.turbo_stream
